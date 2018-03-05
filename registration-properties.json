@@ -1,0 +1,2460 @@
+{
+  "registration_props": {
+    "row": [
+      {
+        "fieldLabel": "Product line",
+        "fieldGroup": "Basic properties",
+        "isRequired": "true",
+        "fieldDescription": "Product line (e.g. 'Black Duck(TM) Protex', 'Black Duck(TM) Export', 'Black Duck(TM) Code Center', 'Black Duck(TM) Code Sight', or 'Black Duck(TM) Suite').",
+        "handle": "product"
+      },
+      {
+        "fieldLabel": "Product stream",
+        "fieldGroup": "Basic properties",
+        "isRequired": "true",
+        "fieldDescription": "Internal product family ('4' or '4-eval' for Protex 4.4+ and Export 5.x+, '1' for Code Center, Code Sight, or Suite).",
+        "handle": "stream"
+      },
+      {
+        "fieldLabel": "System ID",
+        "fieldGroup": "Basic properties",
+        "fieldDescription": "Customer-supplied system identifier. Set automatically during activation.",
+        "handle": "system_id"
+      },
+      {
+        "fieldLabel": "Token",
+        "fieldGroup": "Basic properties",
+        "fieldDescription": "Secret salt for customer key-exchange. Set automatically when needed.",
+        "handle": "token"
+      },
+      {
+        "fieldLabel": "Log Limit",
+        "fieldGroup": "Log",
+        "fieldDescription": "How many log entries to keep. For most customers this should be unlimited, but for test keys that get updated a lot it's useful to restrict. If left blank, will default to unlimited log entries. Otherwise, the number provided will be the limit.",
+        "handle": "log_limit"
+      },
+      {
+        "fieldLabel": "History",
+        "fieldGroup": "Log",
+        "fieldDescription": "The formatted history log.",
+        "fieldDisplayType": "blob",
+        "fieldRows": "8",
+        "handle": "history"
+      },
+      {
+        "fieldLabel": "Date created",
+        "fieldGroup": "Log",
+        "fieldDescription": "Date of creation. Automatically set",
+        "handle": "date_created"
+      },
+      {
+        "fieldLabel": "Created by",
+        "fieldGroup": "Log",
+        "fieldDescription": "Creator. Automatically set",
+        "handle": "created_by"
+      },
+      {
+        "fieldLabel": "Date updated",
+        "fieldGroup": "Log",
+        "fieldDescription": "Date of last update. Automatically set",
+        "handle": "date_updated"
+      },
+      {
+        "fieldLabel": "Updated by",
+        "fieldGroup": "Log",
+        "fieldDescription": "Last administrator. Automatically set",
+        "handle": "updated_by"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "License expiration date",
+        "fieldDescription": "The date after which customers will be warned that this license is about to expire. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "licenseExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "License expiration date",
+        "fieldDescription": "The date after which this license will expire and all product access will be denied. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your license has expired. Contact your Black Duck system administrator.",
+        "handle": "licenseExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "License start date",
+        "fieldDescription": "The date before which customers are warned that this license will be usable soon. Rarely useful.",
+        "fieldMessage": "Your license will be valid soon. Contact your Black Duck system administrator.",
+        "handle": "licenseMinExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "License start date",
+        "fieldDescription": "The date on which this license becomes usable, otherwise all product access is denied. Set automatically at activation and renewal time to prevent large clock skews.",
+        "fieldMessage": "Your license is not yet valid. Check your clock settings and contact your Black Duck system administrator.",
+        "handle": "licenseMinExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "License usage window",
+        "fieldDescription": "Current date. Set for backward compatibility with older systems.",
+        "isNotEditable": "true",
+        "handle": "licenseMinExpirationDate_total"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "License management module",
+        "fieldDescription": "The date after which customers will be warned that the license management module is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your license management module license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expAttorneyModuleExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "License management module",
+        "fieldDescription": "The date after which access to the license management module will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your license management module license has expired. Contact your Black Duck system administrator.",
+        "handle": "expAttorneyModuleExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Encryption export module",
+        "fieldDescription": "The date after which customers will be warned that the encryption export module is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your encryption export module license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expExportSpecialistModuleExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Encryption export module",
+        "fieldDescription": "The date after which access to the encryption export module will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your encryption export module license has expired. Contact your Black Duck system administrator.",
+        "handle": "expExportSpecialistModuleExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Early access features",
+        "fieldDescription": "The date after which customers will be warned that access to early access features is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your access to early access features will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expBetaTestFeatureExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Early access features",
+        "fieldDescription": "The date after which access to early access features will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your access to early access features has expired. Contact your Black Duck system administrator.",
+        "handle": "expBetaTestFeatureExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Custom codeprint service",
+        "fieldDescription": "The date after which customers will be warned that access to the custom codeprint service is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your custom codeprint service access will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expCodeprintServiceExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Custom codeprint service",
+        "fieldDescription": "The date after which access to the custom codeprint service will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your custom codeprint service access has expired. Contact your Black Duck system administrator.",
+        "handle": "expCodeprintServiceExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Deep license service",
+        "fieldDescription": "The date after which customers will be warned that access to the deep license service is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your deep license service access will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expDeepLicenseServiceExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Deep license service",
+        "fieldDescription": "The date after which access to the deep license service will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your deep license service access has expired. Contact your Black Duck system administrator.",
+        "handle": "expDeepLicenseServiceExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Policy Management",
+        "fieldDescription": "The date after which customers will be warned that the Policy Management feature is about to expire. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Policy Management feature license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expPolicyManagementExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Policy Management",
+        "fieldDescription": "The date after which access to the Policy Management feature will be denied. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Policy Management feature license has expired. Contact your Black Duck system administrator.",
+        "handle": "expPolicyManagementExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Notifications",
+        "fieldDescription": "The date after which customers will be warned that the Notifications feature is about to expire.  If empty, access is denied.  Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Notifications feature license will expire soon.  Contact your Black Duck system administrator.",
+        "handle": "expNotificationsExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Notifications",
+        "fieldDescription": "The date after which access to the Notifications feature will be denied.  If empty, access is denied.  Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Notifications feature license has expired.  Contact your Black Duck system administrator.",
+        "handle": "expNotificationsExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "OSS Attribution",
+        "fieldDescription": "The date after which customers will be warned that the OSS Attribution feature is about to expire.  If empty, access is denied.  Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your OSS Attribution feature license will expire soon.  Contact your Black Duck system administrator.",
+        "handle": "expOssAttributionExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "OSS Attribution",
+        "fieldDescription": "The date after which access to the OSS Notices Reports feature will be denied.  If empty, access is denied.  Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your OSS Notices Reports feature license has expired.  Contact your Black Duck system administrator.",
+        "handle": "expOssAttributionExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "OSS Notices Reports",
+        "fieldDescription": "The date after which customers will be warned that the OSS Notices Reports feature is about to expire.  If empty, access is denied.  Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your OSS Notices Reports feature license will expire soon.  Contact your Black Duck system administrator.",
+        "handle": "expOssNoticesReportsExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "OSS Notices Reports",
+        "fieldDescription": "The date after which access to the OSS Notices Reports feature will be denied.  If empty, access is denied.  Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your OSS Notices Reports feature license has expired.  Contact your Black Duck system administrator.",
+        "handle": "expOssNoticesReportsExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "JFrog Xray Integration",
+        "fieldDescription": "The date after which customers will be warned that the JFrog Xray Integration feature is about to expire.  If empty, access is denied.  Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your JFrog Xray Integration feature license will expire soon.  Contact your Black Duck system administrator.",
+        "handle": "expXrayFeedAccessExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "JFrog Xray Integration",
+        "fieldDescription": "The date after which access to the JFrog Xray Integration feature will be denied.  If empty, access is denied.  Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your JFrog Xray Integration feature license has expired.  Contact your Black Duck system administrator.",
+        "handle": "expXrayFeedAccessExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Encryption match service",
+        "fieldDescription": "The date after which customers will be warned that access to the encryption match service is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your encryption matching service access will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expEncryptionMatchServiceExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Encryption match service",
+        "fieldDescription": "The date after which access to the encryption match service will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your encryption matching service access has expired. Contact your Black Duck system administrator.",
+        "handle": "expEncryptionMatchServiceExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Knowledge base release information service",
+        "fieldDescription": "The date after which customers will be warned that access to the knowledge base release information service is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your knowledge base release information service access will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expKnowledgeBaseServiceExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Knowledge base release information service",
+        "fieldDescription": "The date after which access to the knowledge base release information service will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your knowledge base release information service access has expired. Contact your Black Duck system administrator.",
+        "handle": "expKnowledgeBaseServiceExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Test knowledge base release information service",
+        "fieldDescription": "The date after which customers will be warned that access to the test knowledge base release information service is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your test knowledge base release information service access will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expTestKnowledgeBaseServiceExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Test knowledge base release information service",
+        "fieldDescription": "The date after which access to the test knowledge base release information service will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your test knowledge base release information service access has expired. Contact your Black Duck system administrator.",
+        "handle": "expTestKnowledgeBaseServiceExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Scan server",
+        "fieldDescription": "The date after which customers will be warned that the ability for this system to function as a scan server is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your scan server license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expScanServerExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Scan server",
+        "fieldDescription": "The date after which this system will no longer function as a scan server. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "This system is not entitled to be a scan server. Contact your Black Duck system administrator.",
+        "handle": "expScanServerExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Master server",
+        "fieldDescription": "The date after which customers will be warned that the ability for this system to act as a stand-alone or application server is about to expire. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your master server license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "masterServerExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Master server",
+        "fieldDescription": "The date after which this system will no longer be able to function as a stand-alone or application server. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "This system is not entitled to function as a master server. Contact your Black Duck system administrator.",
+        "handle": "masterServerExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "SDK module",
+        "fieldDescription": "The date after which customers will be warned that the SDK module is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your SDK license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expSDKModuleExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "SDK module",
+        "fieldDescription": "The date after which access to the SDK will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your SDK license has expired. Contact your Black Duck system administrator.",
+        "handle": "expSDKModuleExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "REST API",
+        "fieldDescription": "The date after which customers will be warned that REST API access is about to expire. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your REST API license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expRESTAPIExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "REST API",
+        "fieldDescription": "The date after which access to the REST API will be denied. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your REST API license has expired. Contact your Black Duck system administrator.",
+        "handle": "expRESTAPIExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "iScan",
+        "fieldDescription": "The date after which customers will be warned that the iScan feature is about to expire. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your iScan feature license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expIScanExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "iScan",
+        "fieldDescription": "The date after which access to the iScan feature will be denied. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your iScan feature license has expired. Contact your Black Duck system administrator.",
+        "handle": "expIScanExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Connect and Share",
+        "fieldDescription": "The date after which customers will be warned that the Connect and Share feature is about to expire. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Connect and Share feature license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expConnectAndShareExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Connect and Share",
+        "fieldDescription": "The date after which access to the Connect and Share feature will be denied. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Connect and Share feature license has expired. Contact your Black Duck system administrator.",
+        "handle": "expConnectAndShareExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Risk Management",
+        "fieldDescription": "The date after which customers will be warned that the Risk Management feature is about to expire. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Risk Management feature license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expRiskManagementExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Risk Management",
+        "fieldDescription": "The date after which access to the Risk Management feature will be denied. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Risk Management feature license has expired. Contact your Black Duck system administrator.",
+        "handle": "expRiskManagementExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Deep Vulnerability Intelligence",
+        "fieldDescription": "The date after which customers will be warned that the Deep Vulnerability Intelligence feature is about to expire. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Deep Vulnerability Intelligence feature license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expDeepVulnerabilityIntelligenceExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Deep Vulnerability Intelligence",
+        "fieldDescription": "The date after which access to the Deep Vulnerability Intelligence feature will be denied. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Deep Vulnerability Intelligence feature license has expired. Contact your Black Duck system administrator.",
+        "handle": "expDeepVulnerabilityIntelligenceExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Code Search",
+        "fieldDescription": "The date after which customers will be warned that the Code Search feature is about to expire. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Search feature license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expCodeSearchExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Code Search",
+        "fieldDescription": "The date after which access to the Code Search feature will be denied. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Search feature license has expired. Contact your Black Duck system administrator.",
+        "handle": "expCodeSearchExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Project Management",
+        "fieldDescription": "The date after which customers will be warned that the Project Management feature is about to expire. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Project Management feature license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expProjectManagementExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Project Management",
+        "fieldDescription": "The date after which access to the Project Management feature will be denied. If empty, access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Project Management feature license has expired. Contact your Black Duck system administrator.",
+        "handle": "expProjectManagementExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Eclipse plugin module",
+        "fieldDescription": "The date after which customers will be warned that the Eclipse plugin is about to expire. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Eclipse plugin license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "eclipsePluginModuleExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Eclipse plugin module",
+        "fieldDescription": "The date after which access to Eclipse plugin will be denied. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Eclipse plugin license has expired. Contact your Black Duck system administrator.",
+        "handle": "eclipsePluginModuleExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Platform integration module",
+        "fieldDescription": "The date after which customers will be warned that the platform integration module is about to expire. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your platform integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "platformIntegrationModuleExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Platform integration module",
+        "fieldDescription": "The date after which access to platform integration will be denied. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your platform integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "platformIntegrationModuleExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Professional services tool module",
+        "fieldDescription": "The date after which customers will be warned that the professional services tool module is about to expire. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your professional services tool license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "proservModuleExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Professional services tool module",
+        "fieldDescription": "The date after which access to professional services tools will be denied. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your professional services tool license has expired. Contact your Black Duck system administrator.",
+        "handle": "proservModuleExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Command line tool module",
+        "fieldDescription": "The date after which customers will be warned that the command line tool module is about to expire. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your command line tool license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "toolModuleExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Command line tool module",
+        "fieldDescription": "The date after which access to command line tools will be denied. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your command line tool license has expired. Contact your Black Duck system administrator.",
+        "handle": "toolModuleExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "License activation window",
+        "fieldDescription": "The date by which customers should activate the license. If empty no limit is enforced. Rarely useful.",
+        "fieldMessage": "The product activation window will close soon. Contact your Black Duck system administrator.",
+        "handle": "licenseActivationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "License activation window",
+        "fieldDescription": "The date by which customers must activate the license. If empty no limit is enforced.",
+        "fieldMessage": "The product activation window has closed. Contact Black Duck customer support.",
+        "handle": "licenseActivationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "License activation window",
+        "fieldDescription": "The date on which this license was last activated.",
+        "handle": "licenseActivationDate_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "License activations",
+        "fieldDescription": "The number of times this license may be registered or activated without warnings. If empty no limit is enforced.",
+        "fieldMessage": "This license is approaching its activation limit. Contact your Black Duck system administrator.",
+        "handle": "licenseActivations_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "License activations",
+        "fieldDescription": "The number of times this license may be registered or activated. If empty no limit is enforced.",
+        "fieldMessage": "This license has exceeded its activation limit. Contact Black Duck customer support.",
+        "handle": "licenseActivations_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "License activations",
+        "fieldDescription": "The number of times this license has been registered or activated.",
+        "handle": "licenseActivations_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "License renewals",
+        "fieldDescription": "The number of times this license may be renewed or refreshed without warnings. If empty no limit is enforced.",
+        "fieldMessage": "This license is approaching its renewal limit. Contact your Black Duck system administrator.",
+        "handle": "licenseRenewals_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "License renewals",
+        "fieldDescription": "The number of times this license may be renewed or refreshed. If empty no limit is enforced.",
+        "fieldMessage": "This license has exceeded its renewal limit. Contact Black Duck customer support.",
+        "handle": "licenseRenewals_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "License renewals",
+        "fieldDescription": "The number of times this license has been renewed or refreshed.",
+        "handle": "licenseRenewals_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "License cache period",
+        "fieldDescription": "The maximum time (in ms) a customer site can cache a license before getting warnings. If -1 no limit is enforced. Defaults to 1814400000 (3 weeks) if empty.",
+        "handle": "licenseMaxCacheTime_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "License cache period",
+        "fieldDescription": "The maximum time (in ms) a customer site can cache a license. If -1 no limit is enforced. Defaults to 3628800000 (6 weeks) if empty.",
+        "handle": "licenseMaxCacheTime_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "License renewal date",
+        "fieldDescription": "Date after which warnings about stale license cache are generated. Set automatically during renewal based on the license cache period.",
+        "isNotEditable": "true",
+        "handle": "licenseCacheExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "License renewal date",
+        "fieldDescription": "Date when the license must be renewed. Set automatically during renewal based on the license cache period.",
+        "isNotEditable": "true",
+        "handle": "licenseCacheExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "License renewal date",
+        "fieldDescription": "Date when the license was renewed. Set automatically during renewal based on the license cache period.",
+        "isNotEditable": "true",
+        "handle": "licenseCacheExpirationDate_total"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Update service expiration date",
+        "fieldDescription": "The date after which customers are warned that their update service subscription is about to expire. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your update service subscription will expire soon. Contact your Black Duck system administrator.",
+        "handle": "updateServiceExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Update service expiration date",
+        "fieldDescription": "The date after which customers are denied access to the update service. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your update service subscription has expired. Contact your Black Duck system administrator.",
+        "handle": "updateServiceExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Database limits (soft)",
+        "fieldLabel": "Update level",
+        "fieldDescription": "After installing this update customers will be warned that their update service limits are approaching. If -1 or unset no limit is enforced.",
+        "fieldMessage": "Your update subscription service is reaching its limits. Contact your Black Duck system administrator.",
+        "handle": "licenseMaxUpdateLevel_softLimit"
+      },
+      {
+        "fieldGroup": "Database limits (hard)",
+        "fieldLabel": "Update level",
+        "fieldDescription": "The highest update this customer is allowed to install. Should they somehow exceed this limit all product access is denied. If -1 or unset no limit is enforced.",
+        "fieldMessage": "Your license does not permit use of this product update. Contact your Black Duck system administrator.",
+        "handle": "licenseMaxUpdateLevel_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Update level",
+        "fieldDescription": "Last known update level.",
+        "handle": "licenseMaxUpdateLevel_total"
+      },
+      {
+        "fieldGroup": "Database limits (soft)",
+        "fieldLabel": "Knowledge Base Update level",
+        "fieldDescription": "After installing this update customers will be warned that their update service limits are approaching. If -1 no limit is enforced. If 0 or unset, no updates are allowed.",
+        "fieldMessage": "Your Knowledge Base update subscription service is reaching its limits. Contact your Black Duck system administrator.",
+        "handle": "expMaxUpdateLevel.kb_softLimit"
+      },
+      {
+        "fieldGroup": "Database limits (hard)",
+        "fieldLabel": "Knowledge Base Update level",
+        "fieldDescription": "The highest update this customer is allowed to install. Should they somehow exceed this limit all product access is denied. If -1 no limit is enforced. If 0 or unset, no updates are allowed.",
+        "fieldMessage": "Your license does not permit use of this Knowledge Base update. Contact your Black Duck system administrator.",
+        "handle": "expMaxUpdateLevel.kb_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Knowledge Base Update level",
+        "fieldDescription": "Last known Knowledge Base update level.",
+        "handle": "expMaxUpdateLevel.kb_total"
+      },
+      {
+        "fieldGroup": "Database limits (soft)",
+        "fieldLabel": "Vulnerability Update level",
+        "fieldDescription": "After installing this update customers will be warned that their update service limits are approaching. If -1 no limit is enforced. If 0 or unset, no updates are allowed.",
+        "fieldMessage": "Your Vulnerability update subscription service is reaching its limits. Contact your Black Duck system administrator.",
+        "handle": "expMaxUpdateLevel.bdsVuln_softLimit"
+      },
+      {
+        "fieldGroup": "Database limits (hard)",
+        "fieldLabel": "Vulnerability Update level",
+        "fieldDescription": "The highest update this customer is allowed to install. Should they somehow exceed this limit all product access is denied. If -1 no limit is enforced. If 0 or unset, no updates are allowed.",
+        "fieldMessage": "Your license does not permit use of this Vulnerability update. Contact your Black Duck system administrator.",
+        "handle": "expMaxUpdateLevel.bdsVuln_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Vulnerability Update level",
+        "fieldDescription": "Last known Vulnerability update level.",
+        "handle": "expMaxUpdateLevel.bdsVuln_total"
+      },
+      {
+        "fieldGroup": "Database limits (soft)",
+        "fieldLabel": "Patch Update level",
+        "fieldDescription": "After installing this update customers will be warned that their update service limits are approaching. If -1 or unset no limit is enforced.",
+        "fieldMessage": "Your Patch subscription service is reaching its limits. Contact your Black Duck system administrator.",
+        "handle": "licenseMaxUpdateLevel.customPatch_softLimit"
+      },
+      {
+        "fieldGroup": "Database limits (hard)",
+        "fieldLabel": "Patch Update level",
+        "fieldDescription": "The highest update this customer is allowed to install. Should they somehow exceed this limit all product access is denied. If -1 or unset no limit is enforced.",
+        "fieldMessage": "Your license does not permit use of this Patch. Contact your Black Duck system administrator.",
+        "handle": "licenseMaxUpdateLevel.customPatch_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Patch Update level",
+        "fieldDescription": "Last known Patch update level.",
+        "handle": "licenseMaxUpdateLevel.customPatch_total"
+      },
+      {
+        "fieldGroup": "Database limits (soft)",
+        "fieldLabel": "Update limit (off-line updates)",
+        "fieldDescription": "After installing this update customers will be warned that their off-line update service limit is approaching. If -1 no limit is enforced, if 0 or unset offline updates are not allowed.",
+        "fieldMessage": "Your license is approaching its off-line update limit. Contact your Black Duck system administrator.",
+        "handle": "expOfflineUpdateLimit_softLimit"
+      },
+      {
+        "fieldGroup": "Database limits (hard)",
+        "fieldLabel": "Update limit (off-line updates)",
+        "fieldDescription": "The highest update this customer is allowed to install off-line. If -1 no limit is enforced, if 0 or unset off-line updates are not allowed.",
+        "fieldMessage": "Your license does not permit off-line use of this update. Contact your Black Duck system administrator.",
+        "handle": "expOfflineUpdateLimit_hardLimit"
+      },
+      {
+        "fieldGroup": "Database limits (soft)",
+        "fieldLabel": "Knowledge Base Update limit (off-line updates)",
+        "fieldDescription": "After installing this update customers will be warned that their off-line Knowledge Base update service limit is approaching. If -1 no limit is enforced, if 0 or unset offline updates are not allowed.",
+        "fieldMessage": "Your license is approaching its off-line Knowledge Base update limit. Contact your Black Duck system administrator.",
+        "handle": "expOfflineUpdateLimit.kb_softLimit"
+      },
+      {
+        "fieldGroup": "Database limits (hard)",
+        "fieldLabel": "Knowledge Base Update limit (off-line updates)",
+        "fieldDescription": "The highest Knowledge Base update this customer is allowed to install off-line. If -1 no limit is enforced, if 0 or unset off-line updates are not allowed.",
+        "fieldMessage": "Your license does not permit off-line use of this Knowledge Base update. Contact your Black Duck system administrator.",
+        "handle": "expOfflineUpdateLimit.kb_hardLimit"
+      },
+      {
+        "fieldGroup": "Database limits (soft)",
+        "fieldLabel": "Vulnerability Update limit (off-line updates)",
+        "fieldDescription": "After installing this update customers will be warned that their off-line Vulnerability update service limit is approaching. If -1 no limit is enforced, if 0 or unset offline updates are not allowed.",
+        "fieldMessage": "Your license is approaching its off-line Vulnerability update limit. Contact your Black Duck system administrator.",
+        "handle": "expOfflineUpdateLimit.bdsVuln_softLimit"
+      },
+      {
+        "fieldGroup": "Database limits (hard)",
+        "fieldLabel": "Vulnerability Update limit (off-line updates)",
+        "fieldDescription": "The highest Vulnerability update this customer is allowed to install off-line. If -1 no limit is enforced, if 0 or unset off-line updates are not allowed.",
+        "fieldMessage": "Your license does not permit off-line use of this Vulnerability update. Contact your Black Duck system administrator.",
+        "handle": "expOfflineUpdateLimit.bdsVuln_hardLimit"
+      },
+      {
+        "fieldGroup": "Database limits (soft)",
+        "fieldLabel": "Patch Update limit (off-line updates)",
+        "fieldDescription": "After installing this update customers will be warned that their off-line Patch update service limit is approaching. If -1 no limit is enforced, if 0 or unset offline updates are not allowed.",
+        "fieldMessage": "Your license is approaching its off-line Patch update limit. Contact your Black Duck system administrator.",
+        "handle": "expOfflineUpdateLimit.customPatch_softLimit"
+      },
+      {
+        "fieldGroup": "Database limits (hard)",
+        "fieldLabel": "Patch Update limit (off-line updates)",
+        "fieldDescription": "The highest Patch this customer is allowed to install off-line. If -1 no limit is enforced, if 0 or unset off-line updates are not allowed.",
+        "fieldMessage": "Your license does not permit off-line use of this Patch. Contact your Black Duck system administrator.",
+        "handle": "expOfflineUpdateLimit.customPatch_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Pre-activation usage window",
+        "fieldDescription": "The date before which unregistered customers are reminded to activate. If empty no limit is enforced. Rarely useful.",
+        "fieldMessage": "You should activate your product registration soon. Contact your Black Duck system administrator.",
+        "handle": "licenseMinActivationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Pre-activation usage window",
+        "fieldDescription": "The date by which unregistered customers must activate a license, otherwise all product access is denied. If empty no limit is enforced.",
+        "fieldMessage": "Product registration has not been activated. Contact your Black Duck system administrator.",
+        "handle": "licenseMinActivationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Pre-activation usage window",
+        "fieldDescription": "The date on which this license was last activated.",
+        "handle": "licenseMinActivationDate_total"
+      },
+      {
+        "fieldGroup": "Database limits (soft)",
+        "fieldLabel": "Minimum update level",
+        "fieldDescription": "Below this level customers are warned that they should install more updates. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You should update your installation. Contact your Black Duck system administrator.",
+        "handle": "licenseMinUpdateLevel_softLimit"
+      },
+      {
+        "fieldGroup": "Database limits (hard)",
+        "fieldLabel": "Minimum update level",
+        "fieldDescription": "All product access is denied if the customer has not reached this update level. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You must update your installation. Contact your Black Duck system administrator.",
+        "handle": "licenseMinUpdateLevel_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Binary Analysis Tool integration with Protex",
+        "fieldDescription": "The date after which customers will be warned that access to the Protex / Binary Analysis Tool integration is about to expire. If empty or -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex / Binary Analysis Tool integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialExpBATProtexExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Binary Analysis Tool integration with Protex",
+        "fieldDescription": "The date after which access to the Protex / BAT Integration will be denied. If empty or -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex / Binary Analysis Tool integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialExpBATProtexExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Coverity Connect integration with Protex",
+        "fieldDescription": "The date after which customers will be warned that access to the Protex Coverity Connect Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Coverity Connect Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialCoverityConnectProtexExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Coverity Connect integration with Protex",
+        "fieldDescription": "The date after which access to the Protex Coverity Connect Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Coverity Connect Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialCoverityConnectProtexExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Eclipse integration with Protex",
+        "fieldDescription": "The date after which customers will be warned that access to the Protex Eclipse Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Eclipse Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialEclipseProtexExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Eclipse integration with Protex",
+        "fieldDescription": "The date after which access to the Protex Eclipse Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Eclipse Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialEclipseProtexExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Jenkins integration with Protex",
+        "fieldDescription": "The date after which customers will be warned that access to the Protex Jenkins Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Jenkins Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialJenkinsProtexExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Jenkins integration with Protex",
+        "fieldDescription": "The date after which access to the Protex Jenkins Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Jenkins Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialJenkinsProtexExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Rational Team Concert integration with Protex",
+        "fieldDescription": "The date after which customers will be warned that access to the Protex Rational Team Concert Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Rational Team Concert Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialRationalTeamConcertProtexExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Rational Team Concert integration with Protex",
+        "fieldDescription": "The date after which access to the Protex Rational Team Concert Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Rational Team Concert Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialRationalTeamConcertProtexExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "SonarQube integration with Protex",
+        "fieldDescription": "The date after which customers will be warned that access to the Protex SonarQube Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex SonarQube Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialSonarQubeProtexExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "SonarQube integration with Protex",
+        "fieldDescription": "The date after which access to the Protex SonarQube Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex SonarQube Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialSonarQubeProtexExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Atlassian Bamboo integration with Protex",
+        "fieldDescription": "The date after which customers will be warned that access to the Protex Atlassian Bamboo Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Atlassian Bamboo Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialAtlassianBambooProtexExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Atlassian Bamboo integration with Protex",
+        "fieldDescription": "The date after which access to the Protex Atlassian Bamboo Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Atlassian Bamboo Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialAtlassianBambooProtexExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Apache Ant integration with Protex",
+        "fieldDescription": "The date after which customers will be warned that access to the Protex Apache Ant Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Apache Ant Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialApacheAntProtexExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Apache Ant integration with Protex",
+        "fieldDescription": "The date after which access to the Protex Apache Ant Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Protex Apache Ant Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialApacheAntProtexExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Artifactory Pro integration with Code Center",
+        "fieldDescription": "The date after which customers will be warned that access to the Code Center Artifactory Pro Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Artifactory Pro Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialArtifactoryProCodeCenterExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Artifactory Pro integration with Code Center",
+        "fieldDescription": "The date after which access to the Code Center Artifactory Pro Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Artifactory Pro Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialArtifactoryProCodeCenterExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Sonatype Nexus integration with Code Center",
+        "fieldDescription": "The date after which customers will be warned that access to the Code Center Sonatype Nexus Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Sonatype Nexus Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialSonatypeNexusCodeCenterExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Sonatype Nexus integration with Code Center",
+        "fieldDescription": "The date after which access to the Code Center Sonatype Nexus Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Sonatype Nexus Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialSonatypeNexusCodeCenterExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "SonarQube integration with Code Center",
+        "fieldDescription": "The date after which customers will be warned that access to the Code Center SonarQube Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center SonarQube Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialSonarQubeCodeCenterExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "SonarQube integration with Code Center",
+        "fieldDescription": "The date after which access to the Code Center SonarQube Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center SonarQube Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialSonarQubeCodeCenterExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Eclipse integration with Code Center",
+        "fieldDescription": "The date after which customers will be warned that access to the Code Center Eclipse Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Eclipse Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialEclipseCodeCenterExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Eclipse integration with Code Center",
+        "fieldDescription": "The date after which access to the Code Center Eclipse Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Eclipse Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialEclipseCodeCenterExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "IDEA IntelliJ integration with Code Center",
+        "fieldDescription": "The date after which customers will be warned that access to the Code Center IDEA IntelliJ Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center IDEA IntelliJ Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialIDEAIntelliJCodeCenterExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "IDEA IntelliJ integration with Code Center",
+        "fieldDescription": "The date after which access to the Code Center IDEA IntelliJ Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center IDEA IntelliJ Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialIDEAIntelliJCodeCenterExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Microsoft Visual Studio integration with Code Center",
+        "fieldDescription": "The date after which customers will be warned that access to the Code Center Microsoft Visual Studio Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Microsoft Visual Studio Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialMicrosoftVisualStudioCodeCenterExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Microsoft Visual Studio integration with Code Center",
+        "fieldDescription": "The date after which access to the Code Center Microsoft Visual Studio Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Microsoft Visual Studio Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialMicrosoftVisualStudioCodeCenterExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "TeamCity integration with Code Center",
+        "fieldDescription": "The date after which customers will be warned that access to the Code Center TeamCity Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center TeamCity Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialTeamCityCodeCenterExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "TeamCity integration with Code Center",
+        "fieldDescription": "The date after which access to the Code Center TeamCity Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center TeamCity Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialTeamCityCodeCenterExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Jenkins integration with Code Center",
+        "fieldDescription": "The date after which customers will be warned that access to the Code Center Jenkins Integration is about to expire. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Jenkins Integration license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "trialJenkinsCodeCenterExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Jenkins integration with Code Center",
+        "fieldDescription": "The date after which access to the Code Center Jenkins Integration will be denied. If empty defaults to a 30 day trial starting from the first usage. If -1 access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your Code Center Jenkins Integration license has expired. Contact your Black Duck system administrator.",
+        "handle": "trialJenkinsCodeCenterExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Code analysis byte limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their code analysis limits. This is similar to the analyzedBytes scan limit, but is enforced at a file granularity. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your code analysis byte limit. Contact your Black Duck system administrator.",
+        "handle": "bytesAnalyzed_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Code analysis byte limit",
+        "fieldDescription": "Above this level customers are denied access to code analysis. This is similar to the analyzedBytes scan limit, but is enforced at a file granularity. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your code analysis byte limit. Contact your Black Duck system administrator.",
+        "handle": "bytesAnalyzed_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Bytes analyzed",
+        "fieldDescription": "The cumulative number of bytes of code analyzed.",
+        "handle": "bytesAnalyzed_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Code analysis file limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their code analysis limits. This is similar to the analyzedFiles scan limit, but is enforced at a file granularity. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your code analysis file limit. Contact your Black Duck system administrator.",
+        "handle": "filesAnalyzed_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Code analysis file limit",
+        "fieldDescription": "Above this level customers are denied access to code analysis. This is similar to the analyzedFiles scan limit, but is enforced at a file granularity. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your code analysis file limit. Contact your Black Duck system administrator.",
+        "handle": "filesAnalyzed_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Files analyzed",
+        "fieldDescription": "The cumulative number of files the customer has analyzed.",
+        "handle": "filesAnalyzed_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Project analysis limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project analysis limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your project analysis limit. Contact your Black Duck system administrator.",
+        "handle": "projectsAnalyzed_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Project analysis limit",
+        "fieldDescription": "Above this level customers are denied access to project analysis. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your project analysis limit. Contact your Black Duck system administrator.",
+        "handle": "projectsAnalyzed_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Projects analyzed",
+        "fieldDescription": "The cumulative number of project analysis invocations.",
+        "handle": "projectsAnalyzed_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Codeprinting byte limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their codeprinting limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your codeprinting byte limit. Contact your Black Duck system administrator.",
+        "handle": "bytesCodeprinted_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Codeprinting byte limit",
+        "fieldDescription": "Above this level customers are denied access to codeprinting. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your codeprinting byte limit. Contact your Black Duck system administrator.",
+        "handle": "bytesCodeprinted_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Bytes codeprinted",
+        "fieldDescription": "The cumulative number of bytes codeprinted.",
+        "handle": "bytesCodeprinted_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Codeprinting file limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their codeprinting limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your codeprinting file limit. Contact your Black Duck system administrator.",
+        "handle": "filesCodeprinted_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Codeprinting file limit",
+        "fieldDescription": "Above this level customers are denied access to codeprinting. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your codeprinting file limit. Contact your Black Duck system administrator.",
+        "handle": "filesCodeprinted_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Files codeprinted",
+        "fieldDescription": "The cumulative number of files codeprinted.",
+        "handle": "filesCodeprinted_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Codeprinting project limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their codeprinting project limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your codeprinting project limit. Contact your Black Duck system administrator.",
+        "handle": "projectsCodeprinted_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Codeprinting project limit",
+        "fieldDescription": "Above this level customers are denied access to codeprinting. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your codeprinting project limit. Contact your Black Duck system administrator.",
+        "handle": "projectsCodeprinted_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Projects codeprinted",
+        "fieldDescription": "The cumulative number of project codeprinting invocations.",
+        "handle": "projectsCodeprinted_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Code Locations limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their limit for code locations. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your code locations limit. Contact your Black Duck system administrator.",
+        "handle": "codeLocation_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Code Locations limit",
+        "fieldDescription": "Above this level customers are denied creating new code locations. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your code locations limit. Contact your Black Duck system administrator.",
+        "handle": "codeLocation_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Code Locations",
+        "fieldDescription": "The cumulative number of code locations.",
+        "handle": "codeLocation_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Code Location Bytes Limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their limit for code location bytes limit. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your code location bytes limit limit. Contact your Black Duck system administrator.",
+        "handle": "codeLocationBytesLimit_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Code Location Bytes Limit",
+        "fieldDescription": "Above this level customers are denied creating a code location.  If -1 or unset no limit is enforced.",
+        "fieldMessage": "The code location scan exceeds the limit. Contact your Black Duck system administrator.",
+        "handle": "codeLocationBytesLimit_hardLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Scan count",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your total scan limit. Contact your Black Duck system administrator.",
+        "handle": "scanCount_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Scan count",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your total scan limit. Contact your Black Duck system administrator.",
+        "handle": "scanCount_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Scan count",
+        "fieldDescription": "The total number of project scans.",
+        "handle": "scanCount_total"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Scan expiration date",
+        "fieldDescription": "The date after which customers are warned that their ability to upload project scans is about to expire. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your global scan expiration date is approaching. Contact your Black Duck system administrator.",
+        "handle": "scanExpirationDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Scan expiration date",
+        "fieldDescription": "The date after which customers are denied the ability to upload project scans. If empty no limit is enforced. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time.",
+        "fieldMessage": "Your global scan expiration date has passed. Contact your Black Duck system administrator.",
+        "handle": "scanExpirationDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Analyzed bytes (complete scans)",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. Unlike the project Analyzed byte limit this is enforced at a scan granularity, and is thus rarely useful. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your total analyzed byte limit. Contact your Black Duck system administrator.",
+        "handle": "scan_analyzedBytes_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Analyzed bytes (complete scans)",
+        "fieldDescription": "Above this level customers are denied access to project scanning. Unlike the project Analyzed byte limit this is enforced at a scan granularity, and is thus rarely useful. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan would exceed your total analyzed byte limit. Contact your Black Duck system administrator.",
+        "handle": "scan_analyzedBytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Analyzed bytes (complete scans)",
+        "fieldDescription": "The cumulative number of bytes analyzed in complete scans.",
+        "handle": "scan_analyzedBytes_total"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Per-scan analyzed byte limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your global per-scan analyzed byte limit. Contact your Black Duck system administrator.",
+        "handle": "scanMax_analyzedBytes_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Per-scan analyzed byte limit",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan exceeds your global per-scan analyzed byte limit. Contact your Black Duck system administrator.",
+        "handle": "scanMax_analyzedBytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Per-scan analyzed bytes",
+        "fieldDescription": "The maximum number of bytes analyzed per scan for existing scans.",
+        "handle": "scanMax_analyzedBytes_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Codebase analyzed bytes",
+        "fieldDescription": "Above this level customers are warned that they are approaching their codebase limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your aggregate codebase analyzed byte limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_analyzedBytes_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Codebase analyzed bytes",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan exceeds your aggregate codebase analyzed byte limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_analyzedBytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Codebase analyzed bytes",
+        "fieldDescription": "The number of analyzed bytes in the aggregate codebase for existing projects.",
+        "handle": "codebase_analyzedBytes_total"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Analyzed files (complete scans)",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. Unlike the project Analyzed file limit this is enforced at a scan granularity, and is thus rarely useful. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your total scan analyzed file limit. Contact your Black Duck system administrator.",
+        "handle": "scan_analyzedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Analyzed files (complete scans)",
+        "fieldDescription": "Above this level customers are denied access to project scanning. Unlike the project Analyzed file limit this is enforced at a scan granularity, and is thus rarely useful. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan would exceed your total scan analyzed file limit. Contact your Black Duck system administrator.",
+        "handle": "scan_analyzedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Analyzed files (complete scans)",
+        "fieldDescription": "The cumulative number of files analyzed in complete scans.",
+        "handle": "scan_analyzedFiles_total"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Per-scan analyzed file limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your global per-scan analyzed file limit. Contact your Black Duck system administrator.",
+        "handle": "scanMax_analyzedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Per-scan analyzed file limit",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan exceeds your global per-scan analyzed file limit. Contact your Black Duck system administrator.",
+        "handle": "scanMax_analyzedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Per-scan analyzed files",
+        "fieldDescription": "The maximum number of files analyzed per scan for existing scans.",
+        "handle": "scanMax_analyzedFiles_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Codebase analyzed files",
+        "fieldDescription": "Above this level customers are warned that they are approaching their codebase limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your aggregate codebase analyzed file limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_analyzedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Codebase analyzed files",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan exceeds your aggregate codebase analyzed file limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_analyzedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Codebase analyzed files",
+        "fieldDescription": "The number of analyzed files in the aggregate codebase for existing projects.",
+        "handle": "codebase_analyzedFiles_total"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Scanned bytes",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your total scan byte limit. Contact your Black Duck system administrator.",
+        "handle": "scan_bytes_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Scanned bytes",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan would exceed your total scan byte limit. Contact your Black Duck system administrator.",
+        "handle": "scan_bytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Scanned bytes",
+        "fieldDescription": "The cumulative number of bytes scanned.",
+        "handle": "scan_bytes_total"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Per-scan byte limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your global per-scan byte limit. Contact your Black Duck system administrator.",
+        "handle": "scanMax_bytes_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Per-scan byte limit",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan exceeds your global per-scan byte limit. Contact your Black Duck system administrator.",
+        "handle": "scanMax_bytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Per-scan bytes",
+        "fieldDescription": "The maximum number of bytes per scan for existing scans.",
+        "handle": "scanMax_bytes_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Codebase bytes (old)",
+        "fieldDescription": "Above this level customers are warned that they are approaching their codebase limits. If -1 or unset no limit is enforced. Only set one of \"Codebase Bytes (old)\" and \"Codebase Bytes (new)\".",
+        "fieldMessage": "You are approaching your aggregate codebase byte limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_bytes_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Codebase bytes (old)",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced. Only set one of \"Codebase Bytes (old)\" and \"Codebase Bytes (new)\".",
+        "fieldMessage": "This scan exceeds your aggregate codebase byte limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_bytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Codebase bytes",
+        "fieldDescription": "The number of bytes in the aggregate codebase for existing projects.",
+        "handle": "codebase_bytes_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Managed codebase bytes (new)",
+        "fieldDescription": "Above this level customers are warned that they are approaching their codebase limits. If -1 or unset no limit is enforced. Only set one of \"Codebase Bytes (old)\" and \"Codebase Bytes (new)\".",
+        "fieldMessage": "You are approaching your aggregate codebase byte limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_managed_bytes_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Managed codebase bytes (new)",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced. Only set one of \"Codebase Bytes (old)\" and \"Codebase Bytes (new)\".",
+        "fieldMessage": "This scan exceeds your aggregate codebase byte limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_managed_bytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Managed codebase bytes",
+        "fieldDescription": "The number of bytes in the aggregate codebase for existing projects.",
+        "handle": "codebase_managed_bytes_total"
+      },
+      {
+        "fieldGroup": "Usage adjustments",
+        "fieldLabel": "Managed codebase adjustment",
+        "fieldDescription": "The number of bytes to ADD to the customer's computed codebase size to get the effective codebase size that is used in limit checks. Use a NEGATIVE number to reduce the customer's codebase size.",
+        "handle": "codebase_managed_bytes_adjustment"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Scanned files",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your total scan file limit. Contact your Black Duck system administrator.",
+        "handle": "scan_scannedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Scanned files",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan would exceed your total scan file limit. Contact your Black Duck system administrator.",
+        "handle": "scan_scannedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Scanned files",
+        "fieldDescription": "The cumulative number of files scanned.",
+        "handle": "scan_scannedFiles_total"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Per-scan file limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your global per-scan file limit. Contact your Black Duck system administrator.",
+        "handle": "scanMax_scannedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Per-scan file limit",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan exceeds your global per-scan file limit. Contact your Black Duck system administrator.",
+        "handle": "scanMax_scannedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Per-scan files",
+        "fieldDescription": "The maximum number of files per scan for existing scans.",
+        "handle": "scanMax_scannedFiles_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Codebase files",
+        "fieldDescription": "Above this level customers are warned that they are approaching their codebase limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your aggregate codebase file limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_scannedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Codebase files",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan exceeds your aggregate codebase file limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_scannedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Codebase files",
+        "fieldDescription": "The number of files in the aggregate codebase for existing projects.",
+        "handle": "codebase_scannedFiles_total"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Scan files skipped",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your total scan limit on files skipped. Contact your Black Duck system administrator.",
+        "handle": "scan_skippedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Scan files skipped",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan would exceed your total scan limit on files skipped. Contact your Black Duck system administrator.",
+        "handle": "scan_skippedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Scan files skipped",
+        "fieldDescription": "The cumulative number of files skipped during scanning.",
+        "handle": "scan_skippedFiles_total"
+      },
+      {
+        "fieldGroup": "Scan limits (soft)",
+        "fieldLabel": "Per-scan skipped file limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project scan limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your global per-scan limit on files skipped. Contact your Black Duck system administrator.",
+        "handle": "scanMax_skippedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Scan limits (hard)",
+        "fieldLabel": "Per-scan skipped file limit",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan exceeds your global per-scan limit on files skipped. Contact your Black Duck system administrator.",
+        "handle": "scanMax_skippedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Per-scan skipped files",
+        "fieldDescription": "The maximum number of files skipped during a scan for existing scans.",
+        "handle": "scanMax_skippedFiles_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Codebase skipped files",
+        "fieldDescription": "Above this level customers are warned that they are approaching their codebase limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your aggregate codebase limit on files skipped. Contact your Black Duck system administrator.",
+        "handle": "codebase_skippedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Codebase skipped files",
+        "fieldDescription": "Above this level customers are denied access to project scanning. If -1 or unset no limit is enforced.",
+        "fieldMessage": "This scan exceeds your aggregate codebase limit on files skipped. Contact your Black Duck system administrator.",
+        "handle": "codebase_skippedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Codebase skipped files",
+        "fieldDescription": "The number of files skipped in the aggregate codebase for existing projects.",
+        "handle": "codebase_skippedFiles_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Login limit",
+        "fieldDescription": "After this many logins customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license login limit. Contact your Black Duck system administrator.",
+        "handle": "licenseLogins_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Login limit",
+        "fieldDescription": "After this many logins customers are denied all product access. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your license login limit. Contact your Black Duck system administrator.",
+        "handle": "licenseLogins_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Logins",
+        "fieldDescription": "The number of successful logins at the customer site.",
+        "handle": "licenseLogins_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Login limit (Eclipse)",
+        "fieldDescription": "After this many eclipse plugin logins customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your eclipse plugin license login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsEclipse_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Login limit (Eclipse)",
+        "fieldDescription": "After this many logins the eclipse plugin is denied access. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your eclipse plugin license login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsEclipse_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Logins (Eclipse)",
+        "fieldDescription": "The number of successful eclipse plugin logins at the customer site.",
+        "handle": "loginsEclipse_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Login limit (Maintenance)",
+        "fieldDescription": "After this many maintenance logins customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your maintenance login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsMaintenance_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Login limit (Maintenance)",
+        "fieldDescription": "After this many logins maintenance tools are denied access. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your maintenance login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsMaintenance_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Logins (Maintenance)",
+        "fieldDescription": "The number of successful maintenance logins at the customer site.",
+        "handle": "loginsMaintenance_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Login limit (Platform)",
+        "fieldDescription": "After this many platform logins customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your platform login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsPlatform_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Login limit (Platform)",
+        "fieldDescription": "After this many logins platform tools are denied access. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your platform login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsPlatform_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Logins (Platform)",
+        "fieldDescription": "The number of successful platform logins at the customer site.",
+        "handle": "loginsPlatform_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Login limit (ProServ)",
+        "fieldDescription": "After this many professional services logins customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your professional services license login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsProServ_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Login limit (ProServ)",
+        "fieldDescription": "After this many logins professional services tools are denied access. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your professional services license login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsProServ_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Logins (ProServ)",
+        "fieldDescription": "The number of successful professional services logins at the customer site.",
+        "handle": "loginsProServ_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Login limit (SDK)",
+        "fieldDescription": "After this many SDK logins customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your SDK license login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsSDK_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Login limit (SDK)",
+        "fieldDescription": "After this many logins SDK-based tools are denied access. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your SDK license login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsSDK_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Logins (SDK)",
+        "fieldDescription": "The number of successful SDK logins at the customer site.",
+        "handle": "loginsSDK_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Login limit (Tools)",
+        "fieldDescription": "After this many command line tool logins customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your command line tool license login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsTool_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Login limit (Tools)",
+        "fieldDescription": "After this many command line tool logins are denied. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your command line tool license login limit. Contact your Black Duck system administrator.",
+        "handle": "loginsTool_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Logins (Tools)",
+        "fieldDescription": "The number of successful command line tool logins at the customer site.",
+        "handle": "loginsTool_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Login limit (UI)",
+        "fieldDescription": "After this many UI logins customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your UI license login limit. Contact your Black Duck system administrator.",
+        "handle": "licenseLoginsUI_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Login limit (UI)",
+        "fieldDescription": "After this many UI logins customers are denied all product access. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your UI license login limit. Contact your Black Duck system administrator.",
+        "handle": "licenseLoginsUI_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Logins (UI)",
+        "fieldDescription": "The number of successful UI logins at the customer site.",
+        "handle": "licenseLoginsUI_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Scan server limit",
+        "fieldDescription": "After creating this many scan server customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on scan servers. Contact your Black Duck system administrator.",
+        "handle": "scan_server_table_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Scan server limit",
+        "fieldDescription": "Maximum number of scan servers allowed on a customer system. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your license limit on scan servers. Contact your Black Duck system administrator.",
+        "handle": "scan_server_table_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Scan servers",
+        "fieldDescription": "Number of scan servers on a customer system.",
+        "isNotEditable": "true",
+        "handle": "scan_server_table_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "User limit",
+        "fieldDescription": "After creating this many users customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on users. Contact your Black Duck system administrator.",
+        "handle": "enduser_table_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "User limit",
+        "fieldDescription": "Maximum number of users allowed on a customer system. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your license limit on users. Contact your Black Duck system administrator.",
+        "handle": "enduser_table_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Users",
+        "fieldDescription": "Number of users on a customer system.",
+        "isNotEditable": "true",
+        "handle": "enduser_table_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Custom project limit",
+        "fieldDescription": "After creating this many projects customers are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on projects. Contact your Black Duck system administrator.",
+        "handle": "custom_project_table_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Custom project limit",
+        "fieldDescription": "Maximum number of custom projects allowed on a customer system. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your license limit on projects. Contact your Black Duck system administrator.",
+        "handle": "custom_project_table_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Custom projects",
+        "fieldDescription": "Number of projects on a customer system. Does not include searches, custom components, or customized standard projects.",
+        "isNotEditable": "true",
+        "handle": "custom_project_table_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Project release limit",
+        "fieldDescription": "Above this level customers are warned that they are approaching their project release limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your project release limit. Contact your Black Duck system administrator.",
+        "handle": "projectRelease_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Project release limit",
+        "fieldDescription": "Maximum number of releases allowed for any project. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your project release limit. Contact your Black Duck system administrator.",
+        "handle": "projectRelease_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Maximum project release count",
+        "fieldDescription": "The maximum number of existing releases for any project.",
+        "isNotEditable": "true",
+        "handle": "projectRelease_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Indexed file size",
+        "fieldDescription": "Limit on the total size of currently indexed files. Above this level customers are warned that they are approaching their indexing limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your total indexed file size limit. Contact your Black Duck system administrator.",
+        "handle": "indexedFileSize_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Indexed file size",
+        "fieldDescription": "Limit on the total size of currently indexed files. Above this level customers are denied access to indexing. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your total indexed file size limit. Contact your Black Duck system administrator.",
+        "handle": "indexedFileSize_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Indexed file size",
+        "fieldDescription": "The total size of currently indexed files.",
+        "handle": "indexedFileSize_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Indexed lines of code",
+        "fieldDescription": "Limit on the total number of currently indexed lines of code. Above this level customers are warned that they are approaching their indexing limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your total indexed lines of code limit. Contact your Black Duck system administrator.",
+        "handle": "indexedLinesOfCode_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Indexed lines of code",
+        "fieldDescription": "Limit on the total number of currently indexed lines of code. Above this level customers are denied access to indexing. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your total indexed lines of code limit. Contact your Black Duck system administrator.",
+        "handle": "indexedLinesOfCode_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Indexed lines of code",
+        "fieldDescription": "The total number of currently indexed lines of code.",
+        "handle": "indexedLinesOfCode_total"
+      },
+      {
+        "fieldGroup": "Resource limits (soft)",
+        "fieldLabel": "Managed lines of code",
+        "fieldDescription": "Limit on the total number of currently managed lines of code. Above this level customers are warned that they are approaching their managed limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your total managed lines of code limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_managedLinesOfCode_softLimit"
+      },
+      {
+        "fieldGroup": "Resource limits (hard)",
+        "fieldLabel": "Managed lines of code",
+        "fieldDescription": "Limit on the total number of currently managed lines of code. Above this level customers are denied access to managing operations that would increase the managed total lines of code limit. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have exceeded your total managed lines of code limit. Contact your Black Duck system administrator.",
+        "handle": "codebase_managedLinesOfCode_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Managed lines of code",
+        "fieldDescription": "The total number of currently managed lines of code.",
+        "handle": "codebase_managedLinesOfCode_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Just Registered roles",
+        "fieldDescription": "After assigning this many users the Just Registered role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Just Registered users.",
+        "handle": "default_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Just Registered roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Just Registered role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Just Registered users.",
+        "handle": "default_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Just Registered roles",
+        "fieldDescription": "Number of users assigned the Just Registered role.",
+        "isNotEditable": "true",
+        "handle": "default_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "DevPro user roles",
+        "fieldDescription": "After assigning this many users the DevPro user role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on DevPro users.",
+        "handle": "devprouser_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "DevPro user roles",
+        "fieldDescription": "Maximum number of users that may be assigned the DevPro user role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on DevPro users.",
+        "handle": "devprouser_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "DevPro user roles",
+        "fieldDescription": "Number of users assigned the DevPro user role.",
+        "isNotEditable": "true",
+        "handle": "devprouser_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Guest User roles",
+        "fieldDescription": "After assigning this many users the Guest User role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Guest Users.",
+        "handle": "guest_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Guest User roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Guest User role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Guest Users.",
+        "handle": "guest_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Guest User roles",
+        "fieldDescription": "Number of users assigned the Guest User role.",
+        "isNotEditable": "true",
+        "handle": "guest_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "License Calculator Guest roles",
+        "fieldDescription": "After assigning this many users the License Calculator Guest role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on License Calculator Guests.",
+        "handle": "licguest_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "License Calculator Guest roles",
+        "fieldDescription": "Maximum number of users that may be assigned the License Calculator Guest role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on License Calculator Guests.",
+        "handle": "licguest_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "License Calculator Guest roles",
+        "fieldDescription": "Number of users assigned the License Calculator Guest role.",
+        "isNotEditable": "true",
+        "handle": "licguest_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Developer roles",
+        "fieldDescription": "After assigning this many users the Developer role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Developers.",
+        "handle": "basicdeveloper_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Developer roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Developer role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Developers.",
+        "handle": "basicdeveloper_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Developer roles",
+        "fieldDescription": "Number of users assigned the Developer role.",
+        "isNotEditable": "true",
+        "handle": "basicdeveloper_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Power Developer roles",
+        "fieldDescription": "After assigning this many users the Power Developer role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Power Developers.",
+        "handle": "powerdeveloper_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Power Developer roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Power Developer role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Power Developers.",
+        "handle": "powerdeveloper_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Power Developer roles",
+        "fieldDescription": "Number of users assigned as Power Developers.",
+        "isNotEditable": "true",
+        "handle": "powerdeveloper_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Project Leader roles",
+        "fieldDescription": "After assigning this many users the Project Leader role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Project Leaders.",
+        "handle": "projectleader_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Project Leader roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Project Leader role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Project Leaders.",
+        "handle": "projectleader_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Project Leader roles",
+        "fieldDescription": "Number of users assigned the Project Leader role.",
+        "isNotEditable": "true",
+        "handle": "projectleader_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Anonymous User roles",
+        "fieldDescription": "After assigning this many users the anonymous Eclipse Plugin User role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on anonymous Eclipse Plugin Users.",
+        "handle": "eclipsepluginuser_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Anonymous User roles",
+        "fieldDescription": "Maximum number of users that may be assigned the anonymous Eclipse Plugin User role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on anonymous Eclipse Plugin Users.",
+        "handle": "eclipsepluginuser_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Anonymous User roles",
+        "fieldDescription": "Number of users assigned the anonymous Eclipse Plugin User role.",
+        "isNotEditable": "true",
+        "handle": "eclipsepluginuser_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Code Print Manager roles",
+        "fieldDescription": "After assigning this many users the Code Print Manager role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Code Print Manager users.",
+        "handle": "codeprintmanager_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Code Print Manager roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Code Print Manager role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Code Print Manager users.",
+        "handle": "codeprintmanager_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Code Print Manager roles",
+        "fieldDescription": "Number of users assigned the Code Print Manager role.",
+        "isNotEditable": "true",
+        "handle": "codeprintmanager_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Encryption match roles",
+        "fieldDescription": "After assigning this many users the Encryption Match role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Encryption Match users.",
+        "handle": "encryptionmatcher_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Encryption match roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Encryption Match role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Encryption Match users.",
+        "handle": "encryptionmatcher_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Encryption match roles",
+        "fieldDescription": "Number of users assigned the Encryption Match role.",
+        "isNotEditable": "true",
+        "handle": "encryptionmatcher_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Export specialist roles",
+        "fieldDescription": "After assigning this many users the Export Specialist role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Export Specialist users.",
+        "handle": "exportspecialist_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Export specialist roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Export Specialist role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Export Specialist users.",
+        "handle": "exportspecialist_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Export specialist roles",
+        "fieldDescription": "Number of users assigned the Export Specialist role.",
+        "isNotEditable": "true",
+        "handle": "exportspecialist_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Manager roles",
+        "fieldDescription": "After assigning this many users the Manager role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Managers.",
+        "handle": "universalmanager_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Manager roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Manager role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Managers.",
+        "handle": "universalmanager_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Manager roles",
+        "fieldDescription": "Number of users assigned as Managers.",
+        "isNotEditable": "true",
+        "handle": "universalmanager_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Administrator roles",
+        "fieldDescription": "After assigning this many users the Administrator role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Administrators.",
+        "handle": "universaladministrator_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Administrator roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Administrator role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Administrators.",
+        "handle": "universaladministrator_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Administrator roles",
+        "fieldDescription": "Number of users assigned as Administrators.",
+        "isNotEditable": "true",
+        "handle": "universaladministrator_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "SDK Administrator roles",
+        "fieldDescription": "After assigning this many users the SDK Administrator role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on SDK Administrators.",
+        "handle": "sdkadministrator_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "SDK Administrator roles",
+        "fieldDescription": "Maximum number of users that may be assigned the SDK Administrator role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on SDK Administrators.",
+        "handle": "sdkadministrator_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "SDK Administrator roles",
+        "fieldDescription": "Number of users assigned as SDK Administrators.",
+        "isNotEditable": "true",
+        "handle": "sdkadministrator_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Attorney roles",
+        "fieldDescription": "After assigning this many users the Attorney role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Attorneys.",
+        "handle": "attorney_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Attorney roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Attorney role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Attorneys.",
+        "handle": "attorney_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Attorney roles",
+        "fieldDescription": "Number of users assigned as Attorneys.",
+        "isNotEditable": "true",
+        "handle": "attorney_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Early access Manager roles",
+        "fieldDescription": "After assigning this many users the Early access Manager role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Early access Managers.",
+        "handle": "betamanager_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Early access Manager roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Early access Manager role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Early access Managers.",
+        "handle": "betamanager_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Early access Manager roles",
+        "fieldDescription": "Number of users assigned as Early access Managers.",
+        "isNotEditable": "true",
+        "handle": "betamanager_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Early access Administrator roles",
+        "fieldDescription": "After assigning this many users the Early access Administrator role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Early access Administrators.",
+        "handle": "betaadmin_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Early access Administrator roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Early access Administrator role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Early access Administrators.",
+        "handle": "betaadmin_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Early access Administrator roles",
+        "fieldDescription": "Number of users assigned as Early access Administrators.",
+        "isNotEditable": "true",
+        "handle": "betaadmin_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Early access Attorney roles",
+        "fieldDescription": "After assigning this many users the Early access Attorney role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Early access Attorneys.",
+        "handle": "betaattorney_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Early access Attorney roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Early access Attorney role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Early access Attorneys.",
+        "handle": "betaattorney_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Early access Attorney roles",
+        "fieldDescription": "Number of users assigned as Early access Attorneys.",
+        "isNotEditable": "true",
+        "handle": "betaattorney_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "BDS System Administrator roles",
+        "fieldDescription": "After assigning this many users the BDS System Administrators role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on BDS System Administrators.",
+        "handle": "sysadmin_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "BDS System Administrator roles",
+        "fieldDescription": "Maximum number of users that may be assigned the BDS System Administrator role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on BDS System Administrators.",
+        "handle": "sysadmin_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "BDS System Administrator roles",
+        "fieldDescription": "Number of users assigned as BDS System Administrators.",
+        "isNotEditable": "true",
+        "handle": "sysadmin_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "BDS Basic roles",
+        "fieldDescription": "After assigning this many users the BDS Basic Role role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on BDS Basic Roles.",
+        "handle": "bdsbase_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "BDS Basic roles",
+        "fieldDescription": "Maximum number of users that may be assigned the BDS Basic Role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on BDS Basic Roles.",
+        "handle": "bdsbase_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "BDS Basic roles",
+        "fieldDescription": "Number of users assigned the BDS Basic Role.",
+        "isNotEditable": "true",
+        "handle": "bdsbase_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "BDS Legal Administrators roles",
+        "fieldDescription": "After assigning this many users the BDS Legal Administrators role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on BDS Legal Administrators.",
+        "handle": "legaladmin_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "BDS Legal Administrators roles",
+        "fieldDescription": "Maximum number of users that may be assigned the BDS Legal Administrators role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on BDS Legal Administrators.",
+        "handle": "legaladmin_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "BDS Legal Administrators roles",
+        "fieldDescription": "Number of users assigned as BDS Legal Administrators.",
+        "isNotEditable": "true",
+        "handle": "legaladmin_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "BDS Engineers roles",
+        "fieldDescription": "After assigning this many users the BDS Engineers role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on BDS Engineers.",
+        "handle": "engineer_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "BDS Engineers roles",
+        "fieldDescription": "Maximum number of users that may be assigned the BDS Engineers role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on BDS Engineers.",
+        "handle": "engineer_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "BDS Engineers roles",
+        "fieldDescription": "Number of users assigned as BDS Engineers.",
+        "isNotEditable": "true",
+        "handle": "engineer_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "Demonstrator roles",
+        "fieldDescription": "After assigning this many users the Demonstrators role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on Demonstrators.",
+        "handle": "demo_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "Demonstrator roles",
+        "fieldDescription": "Maximum number of users that may be assigned the Demonstrators role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on Demonstrators.",
+        "handle": "demo_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "Demonstrator roles",
+        "fieldDescription": "Number of users assigned as Demonstrators.",
+        "isNotEditable": "true",
+        "handle": "demo_role_total"
+      },
+      {
+        "fieldGroup": "Role limits (soft)",
+        "fieldLabel": "BDS Customer Support roles",
+        "fieldDescription": "After assigning this many users the BDS Customer Support role administrators are warned that they are approaching their license limits. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You are approaching your license limit on BDS Customer Support roles.",
+        "handle": "bdscustomersupport_role_softLimit"
+      },
+      {
+        "fieldGroup": "Role limits (hard)",
+        "fieldLabel": "BDS Customer Support roles",
+        "fieldDescription": "Maximum number of users that may be assigned the BDS Customer Support role. If -1 or unset no limit is enforced.",
+        "fieldMessage": "You have reached your license limit on BDS Customer Support roles.",
+        "handle": "bdscustomersupport_role_hardLimit"
+      },
+      {
+        "fieldGroup": "Usage tallies",
+        "fieldLabel": "BDS Customer Support roles",
+        "fieldDescription": "Number of users assigned the BDS Customer Support role.",
+        "isNotEditable": "true",
+        "handle": "bdscustomersupport_role_total"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Provide registration service",
+        "fieldDescription": "The date after which customers will be warned that their ability to provide registration service is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time. Intended for internal use only.",
+        "fieldMessage": "Your registration service provider license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expRegistrationServerDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Provide registration service",
+        "fieldDescription": "The date after which the ability to provide registration service will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time. Intended for internal use only.",
+        "fieldMessage": "Your registration service provider license has expired. Contact your Black Duck system administrator.",
+        "handle": "expRegistrationServerDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Date limits (soft)",
+        "fieldLabel": "Provide update service",
+        "fieldDescription": "The date after which customers will be warned that their ability to provide update service is about to expire. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time. Intended for internal use only.",
+        "fieldMessage": "Your update service provider license will expire soon. Contact your Black Duck system administrator.",
+        "handle": "expUpdateServerDate_softLimit"
+      },
+      {
+        "fieldGroup": "Date limits (hard)",
+        "fieldLabel": "Provide update service",
+        "fieldDescription": "The date after which the ability to provide update service will be denied. If empty access is denied. Dates between 00010101T000000Z and 01000101T000000Z are relative to the license activation date, and are fixed at activation time. Intended for internal use only.",
+        "fieldMessage": "Your update service provider license has expired. Contact your Black Duck system administrator.",
+        "handle": "expUpdateServerDate_hardLimit"
+      },
+      {
+        "fieldGroup": "Miscellaneous attributes",
+        "fieldLabel": "Surrogate activator",
+        "fieldDescription": "If set and non-zero this registration may be activated by a surrogate, and will not be node-locked until it is loaded on a different system. Normally the license is node-locked during activation. This is intended for use generating pre-activated configuration files, e.g. for off-line customers. The setting will be cleared after the initial activation.",
+        "handle": "surrogateActivator_attribute"
+      },
+      {
+        "fieldGroup": "Miscellaneous attributes",
+        "fieldLabel": "Template registration",
+        "fieldDescription": "If set and non-zero this registration is a template. If negative use is disabled.",
+        "handle": "templateRegistration_attribute"
+      },
+      {
+        "fieldGroup": "Miscellaneous attributes",
+        "fieldLabel": "Registration category",
+        "fieldDescription": "Kind of registration: regular=0, self-registered=1, unregistered=2, evaluation=3",
+        "handle": "registrationCategory_attribute"
+      },
+      {
+        "fieldGroup": "Miscellaneous attributes",
+        "fieldLabel": "Disable automatic update handling",
+        "fieldDescription": "If set and non-zero automatic download, installation, and cleanup of updates is disabled. Normally the 'Automatic update handling' registration options are enforced by a background thread, which can lead to unpleasantness if multiple registrations share a common database. Intended for internal use only.",
+        "handle": "disableAutoUpdateHandling_attribute"
+      },
+      {
+        "fieldGroup": "Miscellaneous attributes",
+        "fieldLabel": "Disable update detection",
+        "fieldDescription": "If positive automatic detection of updates is disabled. If 0 or unset running a new binary implies that an update was installed from media rather than via the update service, and the local registration is invalidated, forcing the user to refresh it. If negative binary upgrades are allowed without a refresh.",
+        "handle": "disableUpdateDetection_attribute"
+      },
+      {
+        "fieldGroup": "Miscellaneous attributes",
+        "fieldLabel": "Preview update limit",
+        "fieldDescription": "Highest update that will be made available for installation even if not generally available. If unset or 0 only released updates will be served. Intended for early access customers.",
+        "handle": "previewUpdateLimit_attribute"
+      },
+      {
+        "fieldGroup": "Miscellaneous attributes",
+        "fieldLabel": "Preview update limit Knowledge Base",
+        "fieldDescription": "Highest Knowledge Base update that will be made available for installation even if not generally available. If unset or 0 only released updates will be served. Intended for early access customers.",
+        "handle": "previewUpdateLimit.kb_attribute"
+      },
+      {
+        "fieldGroup": "Miscellaneous attributes",
+        "fieldLabel": "Preview update limit Vulnerability",
+        "fieldDescription": "Highest Vulnerability update that will be made available for installation even if not generally available. If unset or 0 only released updates will be served. Intended for early access customers.",
+        "handle": "previewUpdateLimit.bdsVuln_attribute"
+      },
+      {
+        "fieldGroup": "Miscellaneous attributes",
+        "fieldLabel": "Disable exact hardware id checking",
+        "fieldDescription": "If unset or zero the active network interface MAC addresses must exactly match those in the registration; if positive only a single match is required. If the customer system has no network interfaces at all a negative value may be used, and hardware-specific checking will be disabled.",
+        "handle": "disableExactHardwareId_attribute"
+      },
+      {
+        "fieldGroup": "Default project limits (hard)",
+        "fieldLabel": "Default project regex search byte limit",
+        "fieldDescription": "The default project limit on file bytes (not characters) examined in a regex search. Only a prefix of larger files will be searched. If -1 no limit is enforced. Defaults to 536870912 (512 MiB).",
+        "handle": "project_fileMax_regexBytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (soft)",
+        "fieldLabel": "Default project regex search byte limit",
+        "fieldDescription": "The default project warning level on file bytes (not characters) examined in a regex search. A warning will be generated at scan time for files exceeding the limit. If -1 no limit is enforced. Defaults to 268435456 (256 MiB).",
+        "handle": "project_fileMax_regexBytes_softLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (hard)",
+        "fieldLabel": "Default project analyzed bytes limit",
+        "fieldDescription": "The default number of analyzed bytes allowed in a project. Projects exceeding the limit will not be scanned. If -1 or unset no limit is enforced.",
+        "handle": "project_scanMax_analyzedBytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (soft)",
+        "fieldLabel": "Default project analyzed bytes limit",
+        "fieldDescription": "The default warning level for analyzed bytes allowed in a project. A warning will be generated at scan time for projects exceeding the limit. If -1 or unset no limit is enforced.",
+        "handle": "project_scanMax_analyzedBytes_softLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (hard)",
+        "fieldLabel": "Default project analyzed files limit",
+        "fieldDescription": "The default number of analyzed files allowed in a project. Projects exceeding the limit will not be scanned. If -1 or unset no limit is enforced.",
+        "handle": "project_scanMax_analyzedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (soft)",
+        "fieldLabel": "Default project analyzed files limit",
+        "fieldDescription": "The default warning level for analyzed files allowed in a project. A warning will be generated at scan time for projects exceeding the limit. If -1 or unset no limit is enforced.",
+        "handle": "project_scanMax_analyzedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (hard)",
+        "fieldLabel": "Default project byte limit",
+        "fieldDescription": "The default maximum number of bytes allowed in a project. Projects exceeding the limit will not be scanned. If -1 no limit is enforced. Defaults to 21474836480 (20 GiB).",
+        "handle": "project_scanMax_bytes_hardLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (soft)",
+        "fieldLabel": "Default project byte limit",
+        "fieldDescription": "The default warning level for bytes allowed in a project. A warning will be generated at scan time for projects exceeding the limit. If -1 no limit is enforced. Defaults to 16106127360 (15 GiB).",
+        "handle": "project_scanMax_bytes_softLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (hard)",
+        "fieldLabel": "Default project scanned file limit",
+        "fieldDescription": "The default maximum number of scanned files allowed in a project. Projects exceeding the limit will not be scanned. If -1 no limit is enforced. Defaults to 750000.",
+        "handle": "project_scanMax_scannedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (soft)",
+        "fieldLabel": "Default project scanned file limit",
+        "fieldDescription": "The default warning level for scanned files allowed in a project. A warning will be generated at scan time for projects exceeding the limit. If -1 no limit is enforced. Defaults to 375000.",
+        "handle": "project_scanMax_scannedFiles_softLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (hard)",
+        "fieldLabel": "Default project skipped file limit",
+        "fieldDescription": "The default maximum number of skipped files allowed in a project. Projects exceeding the limit will not be scanned. If -1 or unset no limit is enforced.",
+        "handle": "project_scanMax_skippedFiles_hardLimit"
+      },
+      {
+        "fieldGroup": "Default project limits (soft)",
+        "fieldLabel": "Default project skipped file limit",
+        "fieldDescription": "The default warning level for skipped files allowed in a project. A warning will be generated at scan time for projects exceeding the limit. If -1 or unset no limit is enforced.",
+        "handle": "project_scanMax_skippedFiles_softLimit"
+      }
+    ]
+  }
+}

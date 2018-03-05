@@ -1,0 +1,33 @@
+.action-block {
+    height: 150px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+    border: 1px solid #DDD;
+    transition: border-color 0.5s ease-out;
+}
+
+.action-block span.title {
+    font-size: 2em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #888;
+}
+
+.action-block .bg-icon {
+    position: absolute;
+    right: -12px;
+    bottom: -33px;
+    color: #DDD;
+    transition: opacity 0.5s ease-out;
+}
+
+.action-block .bg-icon span {
+    font-size: 14em;
+}
+
+.action-block:hover .bg-icon {
+    opacity: 0.5;
+}

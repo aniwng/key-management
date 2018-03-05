@@ -1,0 +1,46 @@
+{
+  "name": "reg-edit",
+  "version": "1.0.0",
+  "description": "Reg Edit as known as the Registration UI, used to manage product keys",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://annieweng@bitbucket.org/bdsengineering/reg-edit.git"
+  },
+  "author": "Annie Weng",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/bdsengineering/reg-edit#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "css-loader": "^0.28.4",
+    "express": "^4.15.3",
+    "moment": "^2.18.1",
+    "pg-promise": "^6.1.1",
+    "react-bootstrap": "^0.31.0",
+    "react-fontawesome": "^1.6.1",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.1.0-beta.22",
+    "webpack-dev-middleware": "^1.10.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  }
+}
