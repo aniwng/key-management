@@ -1,6 +1,6 @@
-# Reg Edit #
+# Key Management #
 
-Reg Edit as known as the new Registration UI which we use to manage our product keys.
+Prototype of a key management app.
 
 ## Setup ##
 
